@@ -30,14 +30,27 @@ dependencies {
 ```java
 package com.example.plugin;
 
-import com.LGDXCompany.worldchatformats.WorldChatFormatterAPI;
+import com.LGDXCompany.Permission;
+import com.LGDXCompany.ChatFormatter;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class ExamplePlugin extends JavaPlugin {
     @Override
     public void onEnable() {
-        WorldChatFormatterAPI api = new WorldChatFormatterAPI();
-        // Use the API to format chat messages
+        getServer().getPluginManager().registerEvents(new Listener() {
+            @EventHandler
+            public void onPlayerChat(AsyncPlayerChatEvent event) {
+                Player player = event.getPlayer();
+                if (Permission.hasPermission(player, "chat.use")) {
+                    String formattedMessage = ChatFormatter.formatChat(player, event.getMessage());
+                    event.setFormat(formattedMessage);
+                }
+            }
+        }, this);
     }
 }
 ```
