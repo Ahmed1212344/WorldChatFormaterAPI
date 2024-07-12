@@ -68,10 +68,6 @@ cd WorldChatFormatterAPI
 ```shell
 mvn clean install
 ```
-3- Clean and build the project with Gradle:
-```shell
-./gradlew clean build
-```
 **_The resulting JAR file will be located in the target directory for Maven 
 and the build/libs directory for Gradle._**
 
