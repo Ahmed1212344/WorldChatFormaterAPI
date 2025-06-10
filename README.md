@@ -1,4 +1,4 @@
-**Note: It is not important to add this plugin If you are using BungeeCord or Multi server
+## **Note: It is not important to add this plugin If you are using BungeeCord or Multi server**
 
 ```markdown
 # WorldChatFormatterAPI
