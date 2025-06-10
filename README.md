@@ -1,3 +1,5 @@
+**Note: It is not important to add this plugin If you are using BungeeCord or Multi server
+
 ```markdown
 # WorldChatFormatterAPI
 
@@ -34,7 +36,7 @@ import com.LGDXCompany.Permission;
 import com.LGDXCompany.ChatFormatter;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.event.EventHandler;
+import org.bukkit.event.Eve#tHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
